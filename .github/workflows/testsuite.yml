@@ -76,14 +76,21 @@ jobs:
     strategy:
       matrix:
         include:
-          # 3.1.0 for ppc64le
+          # ppc64le for Python 3.10
           - os: ppc64le
             os-version: latest
             python-version: "3.10"
-          # amd64 for linux (ubuntu)
+          # amd64 for linux (ubuntu) for Python 3.10
           - os: ubuntu
             os-version: latest
             python-version: "3.10"
+          # COMMENTED OUT - Other OS/Python combinations
+          # - os: macos
+          #   os-version: latest
+          #   python-version: "3.11"
+          # - os: windows
+          #   os-version: latest
+          #   python-version: "3.11"
 
       fail-fast: false
 
